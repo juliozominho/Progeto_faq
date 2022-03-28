@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 450;
+}
+
+html{
+    background: linear-gradient(#af67e9, #6565e7);
+    min-height: 100%;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.faq{
+    width: 65%;
+    min-height: 450%;
+    background-color: azure; 
+    box-shadow: 0px 25px 50px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.faq .ilustracao{
+    position: relative;
+    left: -120px;
+    width: 50%;
+    margin: 50px 0;
+}
+
+.faq .conteudo{
+    width: 40%;
+    padding-bottom: 20px;
+}
+
+.faq .conteudo h1{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 29px;
+}
+
+.faq .conteudo .lista{
+    list-style-type: none;
+}
+
+.faq .conteudo .lista .item{
+    cursor: pointer;
+    background-image: url(./src/imagens/icone-seta-pra-baixo.png);
+    background-repeat: no-repeat;
+    background-position: top 8px right 0;
+    background-size: 12px;
+    border-bottom: 1px solid rgba(155, 127, 127, 0.644);
+    margin: 10px 0;
+}
+.faq .conteudo .lista .item:last-child{
+    border-bottom: none;
+    
+}
+.item .pergunta{
+    padding-bottom: 15px;
+    font-size: 18px;
+    width: 90%;
+    transition: 0.2s ease;
+}
+
+.item .pergunta:hover{
+    color: tomato;
+}
+
+.item .resposta{
+    display: none;
+    padding-bottom: 15px;
+}
+
+/* estilo ativo*/
+.faq .lista .item.ativo h2{
+    font-weight: 700;
+}
+
+.faq .lista .item.ativo .resposta{
+    display: block;
+}
+
+.faq .lista .item.ativo{
+    background-image: url(./src/imagens/icone-seta-pra-cima.png);
+}
+
+
+
+@media(max-width: 1140px){
+    .faq{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .faq .conteudo{
+        width: 100%;
+    }
+
+    .faq .conteudo h1{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .faq .lista{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .faq .lista .pergunta{
+        font-size: 16px;
+    }
+
+    .faq .ilustracao{
+        width: 40%;
+        left: 0%;
+        margin: 30px 0;
+    }
+
+}
+
+@media(max-width: 425px){
+    .faq{
+        height: 540px;
+    }
+}
